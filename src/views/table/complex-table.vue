@@ -8,25 +8,28 @@
         class="filter-item"
         @keyup.enter.native="handleFilter"
       />
+      <span for="">首次参考价格</span>
       <el-input
         v-model="listQuery.referencePrice"
         :placeholder="首次参考价格"
         style="width: 100px"
         class="filter-item"
       />
+      <span for="">下降幅度</span>
       <el-input
         v-model="listQuery.buyThreshold"
         :placeholder="下降幅度"
         style="width: 100px"
         class="filter-item"
       />
+      <span>上涨幅度</span>
       <el-input
         v-model="listQuery.sellThreshold"
         :placeholder="上涨幅度"
         style="width: 100px"
         class="filter-item"
       />
-
+      <span>监控区间</span>
       <el-input
         v-model="listQuery.minPrice"
         :placeholder="监控区间最小"
@@ -40,6 +43,7 @@
         style="width: 100px"
         class="filter-item"
       />
+      <span>买入金额</span>
       <el-input
         v-model="listQuery.buyAmount"
         :placeholder="买入金额"
@@ -47,6 +51,7 @@
         class="filter-item"
       />
 
+      <span>选择类型</span>
       <el-select
         v-model="listQuery.dataType"
         :placeholder="选择类型"
@@ -95,7 +100,7 @@
         icon="el-icon-search"
         @click="handleFilter"
       >
-        {{ $t("table.search") }}
+        基金搜索
       </el-button>
       <el-button
         class="filter-item"
